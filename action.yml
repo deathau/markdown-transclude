@@ -1,0 +1,17 @@
+name: 'Markdown Transclusion'
+description: 'Transclude markdown files into one'
+inputs:
+  source:
+    description: 'Source File Path'
+    required: true
+    default: 'templates/README.md'
+  dest:
+    description: 'Destination Output File Path'
+    required: true
+    default: 'README.md'
+outputs:
+  markdown:
+    description: 'The markdown output'
+runs:
+  using: 'node12'
+  main: 'main/index.js'

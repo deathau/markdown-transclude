@@ -1,0 +1,12 @@
+{
+  "name": "markdown-transclude",
+ "scripts": {
+    "build": "ncc build src/index.js -o dist",
+    "test": "ncc build src/index.js -o dist && export $(cat .env | xargs) && node dist/index.js"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^4.0.0",
+    "@vercel/ncc": "^0.23.0"
+  }
+}
